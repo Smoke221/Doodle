@@ -118,6 +118,20 @@ const Private: React.FC = () => {
         />
     ));
 
+    // to download as an image.
+    const exportWhiteboard = () => {
+        if (!editor) {
+            return;
+        }
+        const dataURL = editor.canvas.toDataURL();
+
+        const link = document.createElement('a');
+        link.href = dataURL;
+        link.download = 'whiteboard.png';
+
+        link.click();
+    };
+
     return (
         <div className="container mt-5">
             <h1 className="text-center mb-4">Doodl</h1>
@@ -170,6 +184,7 @@ const Private: React.FC = () => {
                             className="form-control"
                         />
                     </label>
+                    <button className="btn btn-success d-flex flex-column align-items-center m-2  bi bi-arrow-down-circle" onClick={exportWhiteboard}><span style={{ fontSize: '0.6rem' }}>Download</span></button>
                 </div>
                 <div className="col-9">
                     <FabricJSCanvas className="border border-dark" onReady={onReady} />
