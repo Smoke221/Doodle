@@ -16,9 +16,13 @@ const ShapesMenu: React.FC<ShapesMenuProps> = ({ onSelectShape }) => {
         <option value="circle">Circle</option>
         <option value="rectangle">Rectangle</option>
         <option value="triangle">Triangle</option>
+        <option value="ellipse">Ellipse</option>
+        <option value="line">Line</option>
+        <option value="polygon">Polygon</option>
       </select>
     </div>
-  );
+);
+
 };
 
 export default ShapesMenu;
