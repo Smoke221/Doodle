@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "keycloak-connect": "^24.0.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5"
   },
